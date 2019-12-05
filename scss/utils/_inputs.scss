@@ -1,0 +1,74 @@
+@mixin select {
+   @include icon(arrow);
+
+   position: relative;
+   border: 1px solid $grey07;
+
+   &::before {
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      right: 10px;
+      font-size: 13px;
+      color: $grey06;
+      transform: rotate(90deg);
+   }
+}
+
+@mixin input {
+   font-size: 15px;
+   color: $grey06;
+   line-height: 38px;
+   font-weight: 300;
+   border: 1px solid $grey07;
+   padding: 0 10px;
+   width: 100%;
+
+   &::placeholder {
+      color: $grey06;
+   }
+
+   &:focus {
+      color: $grey01;
+      border-color: $grey01;
+   }
+
+   &.error {
+      border-color: $red01;
+      background: $red02;
+   }
+}
+
+@mixin search_input {
+   padding: 0 30px 0 10px;
+   width: 100%;
+   color: $grey06;
+   line-height: 30px;
+   background: transparent;
+   border: 1px solid $grey07;
+
+   &::placeholder {
+      color: $grey06;
+   }
+
+   &:focus {
+      color: $grey01;
+      border-color: $grey01;
+   }
+}
+
+@mixin checkbox {
+   position: relative;
+   padding-left: 30px;
+
+   &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      box-shadow: 0 0 0 1px $grey07;
+      cursor: pointer;
+   }
+}

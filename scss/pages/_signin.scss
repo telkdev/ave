@@ -1,0 +1,80 @@
+.authorization {
+   @include site_width;
+   @include clearfix;
+
+   padding: 100px 0 60px;
+
+   &-sign_in {
+      padding-right: percentage(15, 585);
+   }
+
+   &-register {
+      padding-left: percentage(15, 585);
+      border-left: 1px solid $grey09;
+   }
+
+   &-form {
+      &-wrapper {
+         width: 50%;
+         float: left;
+      }
+   }
+
+   &-title {
+      margin-bottom: 50px;
+   }
+
+   &-input {
+      @include input;
+
+      margin-bottom: 30px;
+   }
+
+   &-actions {
+      @include clearfix;
+   }
+
+   &-submit {
+      @include button;
+
+      .authorization-sign_in & {
+         float: left;
+      }
+   }
+
+   &-reset_password {
+      float: right;
+      line-height: 64px;
+
+      &-link {
+         font-family: 'Roboto';
+         font-size: 15px;
+         color: $blue01;
+         display: inline;
+      }
+   }
+
+   &-checkbox {
+      &-wrapper {
+         margin-bottom: 30px;
+      }
+
+      &:checked~.authorization-label {
+         @include icon(check);
+
+         &::before {
+            position: absolute;
+            left: 3px;
+            top: 0;
+            font-size: 15px;
+            color: $blue01;
+         }
+      }
+   }
+
+   &-label {
+      @include checkbox;
+
+      font-size: 14px;
+   }
+}

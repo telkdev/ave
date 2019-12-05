@@ -1,0 +1,154 @@
+.stores {
+   background: $white01;
+   padding: 60px 0;
+
+   &-inner {
+      @include site_width;
+   }
+
+   &-list {
+      font-size: 0;
+      margin-left: -(percentage(20, 1170));
+      margin-top: -60px;
+   }
+
+   &-item {
+      @include percentage(370);
+      @include inline_block;
+
+      margin-left: percentage(20, 1170);
+      margin-top: 60px;
+   }
+
+   &-title {
+      margin-bottom: 25px;
+   }
+
+   &-address {
+      margin-bottom: 15px;
+   }
+
+   &-description {
+      margin-bottom: 30px;
+   }
+
+   &-link {
+      @include button;
+   }
+}
+
+.location {
+   background: $white02;
+   margin-bottom: 120px;
+   display: flex;
+
+   &-map {
+      width: 68%;
+   }
+
+   &-details {
+      width: 32%;
+
+      padding: 40px 3.5% 40px 2%;
+   }
+
+   &-title {
+      margin-bottom: 25px;
+   }
+
+   &-address {
+      margin-bottom: 15px;
+   }
+
+   &-description {
+      margin-bottom: 30px;
+   }
+
+   &-item {
+      &+& {
+         margin-top: 20px;
+      }
+   }
+
+   &-list {
+      margin-bottom: 60px;
+   }
+
+   &-link,
+   &-text {
+      font-size: 14px;
+      color: $grey05;
+      position: relative;
+
+      &::before {
+         font-size: 11px;
+         color: $grey05;
+         line-height: 14px;
+
+      }
+   }
+
+   &-socials {
+      &-list {
+         font-size: 0;
+      }
+
+      &-item {
+         @include inline_block;
+
+         &+& {
+            margin-left: 15px;
+         }
+      }
+
+      &-link {
+         border-radius: 50%;
+         background: $grey02;
+         width: 32px;
+         height: 32px;
+         text-align: center;
+         line-height: 32px;
+
+         &::before {
+            font-size: 18px;
+            color: $white01;
+         }
+      }
+   }
+
+   &-exact_address {
+      @include icon(location);
+   }
+
+   &-number {
+      @include icon(phone);
+   }
+
+   &-website {
+      @include icon(chains);
+   }
+
+   &-mail {
+      @include icon(mail);
+   }
+
+   &-schedule {
+      @include icon(clock);
+   }
+
+   &-facebook {
+      @include icon(facebook);
+   }
+
+   &-twitter {
+      @include icon(twitter);
+   }
+
+   &-instagram {
+      @include icon(instagram);
+   }
+
+   &-pinterest {
+      @include icon(pinterest);
+   }
+}

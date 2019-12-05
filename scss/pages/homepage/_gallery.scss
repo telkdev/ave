@@ -1,0 +1,47 @@
+.gallery {
+   background: $white01;
+
+   &-inner {
+      @include site_width(1770px);
+
+      padding: 150px 0 75px;
+   }
+
+   &-list {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &-item {
+      position: relative;
+      width: percentage(420, 1770);
+      transition: all 0.7s linear;
+
+      &:hover {
+         box-shadow: 0 0 16px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      &:hover .gallery-info {
+         opacity: 1;
+      }
+   }
+
+   &-label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 21px;
+      color: $grey04;
+   }
+
+   &-info {
+      padding: 15px;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.5s linear;
+   }
+
+   &-title {
+      margin-bottom: 20px;
+   }
+}

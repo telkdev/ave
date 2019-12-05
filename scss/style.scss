@@ -1,0 +1,24 @@
+// UTILS
+@import 'utils/_fonts.scss';
+@import 'utils/_icons-font.scss';
+@import 'utils/_var.scss';
+@import 'utils/_inputs.scss';
+@import 'utils/_buttons.scss';
+@import 'utils/_mixins.scss';
+
+// GENERAL
+@import 'general/_reset.scss';
+@import 'general/_main.scss';
+
+// COMPONENTS
+@import 'components/_header.scss';
+@import 'components/_nav.scss';
+@import 'components/_footer.scss';
+@import 'components/_banner.scss';
+
+// PAGES
+@import 'pages/homepage/_gallery.scss'; //homepage
+@import 'pages/homepage/_lookbook.scss'; //homepage
+@import 'pages/_product.scss'; //prod
+@import 'pages/_location.scss'; //location
+@import 'pages/_signin.scss'; //sign in

@@ -1,0 +1,66 @@
+.header {
+   min-height: 110px;
+   background: $white02;
+   display: flex;
+
+   &-main {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: transparent;
+      z-index: 10;
+   }
+
+   &-inner {
+      @include site_width(1770px);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &-form {
+      position: relative;
+      transform: translateY(-50%);
+      margin-top: 16px;
+      width: 10.6%;
+      min-width: 190px;
+      margin-left: 6.4%;
+
+      &-input {
+         @include search_input;
+      }
+
+      &-submit {
+         @include icon(search);
+
+         position: absolute;
+         right: 0;
+         top: 0;
+         height: 100%;
+         width: 32px;
+
+         &::before {
+            font-size: 14px;
+            color: $grey06;
+         }
+      }
+   }
+}
+
+.logo {
+   transform: translateY(-50%);
+
+   &-link {
+      color: $black01;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: $regular;
+      letter-spacing: 1px;
+
+      &-highlight {
+         font-weight: $bold;
+      }
+   }
+}

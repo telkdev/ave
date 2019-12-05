@@ -1,0 +1,57 @@
+.lookbook {
+   margin-bottom: 110px;
+   background: $white01;
+
+   &-list {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &-item {
+      width: percentage(660, 2050);
+      display: flex;
+      justify-content: space-between;
+      background: $white02;
+   }
+
+   &-image {
+      &-wrapper {
+         width: percentage(290, 660);
+
+         display: flex;
+         align-self: flex-end;
+         padding-left: 7%;
+         padding-top: 15px;
+      }
+   }
+
+   &-content {
+      width: percentage(350, 660);
+      text-align: right;
+      margin: 70px 0;
+      padding-right: 7%;
+   }
+
+   &-title {
+      color: $grey01;
+      font-size: 48px;
+      line-height: 54px;
+      font-weight: $regular;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+
+      &-highlight {
+         display: block;
+         font-weight: $bold;
+      }
+   }
+
+   &-description {
+      color: $grey02;
+      margin-bottom: 30px;
+   }
+
+   &-link {
+      @include button;
+   }
+}

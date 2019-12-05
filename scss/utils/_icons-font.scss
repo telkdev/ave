@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "icons";
+  src: url('../fonts/icons/icons.eot');
+  src: url('../fonts/icons/icons.eot?#iefix') format('eot'),
+  // url('../fonts/icons/icons.woff2') format('woff2'),
+  url('../fonts/icons/icons.woff') format('woff'),
+  url('../fonts/icons/icons.ttf') format('truetype'),
+  url('../fonts/icons/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+  font-family: "icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+  font-size: 32px;
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == arrow {
+  $char: "\E001";
+}
+  @if $filename == chains {
+  $char: "\E002";
+}
+  @if $filename == check {
+  $char: "\E003";
+}
+  @if $filename == clock {
+  $char: "\E004";
+}
+  @if $filename == facebook {
+  $char: "\E005";
+}
+  @if $filename == heart {
+  $char: "\E006";
+}
+  @if $filename == instagram {
+  $char: "\E007";
+}
+  @if $filename == location {
+  $char: "\E008";
+}
+  @if $filename == mail {
+  $char: "\E009";
+}
+  @if $filename == phone {
+  $char: "\E00A";
+}
+  @if $filename == pinterest {
+  $char: "\E00B";
+}
+  @if $filename == search {
+  $char: "\E00C";
+}
+  @if $filename == shopping-cart {
+  $char: "\E00D";
+}
+  @if $filename == twitter {
+  $char: "\E00E";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %icon;
+  } @else {
+    @include icon-styles;
+  }
+  content: icon-char($filename);
+}
+}
+
+.icon-arrow {
+  @include icon(arrow);
+}
+.icon-chains {
+  @include icon(chains);
+}
+.icon-check {
+  @include icon(check);
+}
+.icon-clock {
+  @include icon(clock);
+}
+.icon-facebook {
+  @include icon(facebook);
+}
+.icon-heart {
+  @include icon(heart);
+}
+.icon-instagram {
+  @include icon(instagram);
+}
+.icon-location {
+  @include icon(location);
+}
+.icon-mail {
+  @include icon(mail);
+}
+.icon-phone {
+  @include icon(phone);
+}
+.icon-pinterest {
+  @include icon(pinterest);
+}
+.icon-search {
+  @include icon(search);
+}
+.icon-shopping-cart {
+  @include icon(shopping-cart);
+}
+.icon-twitter {
+  @include icon(twitter);
+}
